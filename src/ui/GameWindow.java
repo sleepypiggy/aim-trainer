@@ -1,11 +1,13 @@
+package ui;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class GameWindow extends JFrame {
     private CardLayout cardLayout;
     private JPanel mainPanel;
-    private MenuUI menu = new MenuUI(this);
     private GameUI game = new GameUI(this);
+    private MenuUI menu = new MenuUI(this, game);
     private GameOverUI gameOver = new GameOverUI(this);
 
     public GameWindow() {
@@ -30,7 +32,8 @@ public class GameWindow extends JFrame {
         cardLayout.show(mainPanel, "Game");
     }
 
-    public void switchToGameOverUI() {
+    public void switchToGameOverUI(GameUI game) {
+        gameOver.setFinalScore(game.returnScore());
         cardLayout.show(mainPanel, "Game Over");
     }
 }
