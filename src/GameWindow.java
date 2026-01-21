@@ -5,7 +5,8 @@ public class GameWindow extends JFrame {
     private CardLayout cardLayout;
     private JPanel mainPanel;
     private MenuUI menu = new MenuUI(this);
-    private GameUI game = new GameUI();
+    private GameUI game = new GameUI(this);
+    private GameOverUI gameOver = new GameOverUI(this);
 
     public GameWindow() {
         cardLayout = new CardLayout();
@@ -18,6 +19,7 @@ public class GameWindow extends JFrame {
 
         mainPanel.add(menu, "Menu");
         mainPanel.add(game, "Game");
+        mainPanel.add(gameOver, "Game Over");
 
         add(mainPanel);
 
@@ -26,5 +28,9 @@ public class GameWindow extends JFrame {
 
     public void switchToGameUI() {
         cardLayout.show(mainPanel, "Game");
+    }
+
+    public void switchToGameOverUI() {
+        cardLayout.show(mainPanel, "Game Over");
     }
 }

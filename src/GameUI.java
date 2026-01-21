@@ -1,32 +1,39 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class GameUI extends JPanel {
     private int scoreCounter = 0;
-    private int timerCounter = 0;
+    private int timerCounter = 3;
     private Random random = new Random();
     private JLabel scoreDisplay = new JLabel(String.valueOf(scoreCounter));
+    private Timer timer;
 
-    public GameUI() {
+    public GameUI(GameWindow gameWindow) {
+        //set layout of this
         setLayout(null);
+
+        // start game loop
         addNewButton();
-        Timer timer = new Timer(1000, new ActionListener() {
+
+        // create timer
+        timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(timerCounter);
-                timerCounter++;
-                if (timerCounter == 5) {
-                   try {
-                       Thread.sleep(5000);
-                   } catch (InterruptedException ex) {
-                       System.out.println("Something went wrong... ");
-                   }
+                timerCounter--;
+                if (timerCounter == 0) {
+                    gameWindow.switchToGameOverUI();
+                    timer.stop();
                 }
             }
         });
+
+        //start timer
         timer.start();
+
     }
 
     private void addNewButton() {
