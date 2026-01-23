@@ -6,16 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuUI extends JPanel {
-    Timer timer;
-    int timerCounter = 5;
-    ImageIcon playButtonImage;
-    Image playButtonImageScaled;
-    ImageIcon exitButtonImage;
-    Image exitButtonImageScaled;
-    ImageIcon playButtonClickedImage;
-    Image playButtonClickedImageScaled;
-    ImageIcon exitButtonClickedImage;
-    Image exitButtonClickedImageScaled;
+    private Timer timer;
+    private int timerCounter = 5;
+    private ImageIcon playButtonImage;
+    private Image playButtonImageScaled;
+    private ImageIcon exitButtonImage;
+    private Image exitButtonImageScaled;
+    private ImageIcon playButtonClickedImage;
+    private Image playButtonClickedImageScaled;
+    private ImageIcon exitButtonClickedImage;
+    private Image exitButtonClickedImageScaled;
 
     public MenuUI(GameWindow gameWindow, GameUI game) {
         // create button images

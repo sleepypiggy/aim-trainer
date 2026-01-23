@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class GameUI extends JPanel {
-    int scoreCounter = 0;
+    private int scoreCounter = 0;
     private Random random = new Random();
     private JLabel scoreDisplay = new JLabel(String.valueOf(scoreCounter));
     private JButton button;
@@ -71,5 +71,6 @@ public class GameUI extends JPanel {
         button.setContentAreaFilled(false);
         button.setFocusPainted(false);
     }
+
 }
 
