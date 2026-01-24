@@ -12,7 +12,7 @@ After starting, click buttons to increase score.
 
 Obviously very much incomplete. There's still stuff to be added.
 
-DEMONSTRATION OUT OF DATE
-![Recording 2026-01-14 154733](https://github.com/user-attachments/assets/f164a138-33a8-4352-bdbd-52062d0d84b7)
+![Recording 2026-01-23 225037](https://github.com/user-attachments/assets/31b0e7b3-3746-4d7b-afdf-95d70c54d760)
+
 
 
